@@ -9,7 +9,7 @@ El proyecto en cuestión tiene como objetivo predecir el estilo de lucha de un p
 Plan de acción:
 Se utilizará un dataset real de estadísticas de peleadores de la UFC, el cual incluye variables como golpes significativos por minuto, derribos, sumisiones, precisión y defensa.
 Los pasos a ejecutar son los siguientes:
-1.	Limpieza de datos y creación de la variable objetivo, la cual llamaremos “estilo_pelea”.
+1.	Limpieza de datos y creación de la variable objetivo, la cual llamaremos “estilo_lucha”.
 2.	EDA  y Feature Engineering.
 3.	División de datos en entrenamiento y prueba.
 4.	Entrenamiento de un modelo de clasificación.
