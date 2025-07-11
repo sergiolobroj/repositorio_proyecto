@@ -1,6 +1,6 @@
 name: predicciones_ufc
 dependencies:
-  - python=3.11
+  - python=3.10
   - pip
   - pip:
     - pandas==1.5.3
