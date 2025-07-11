@@ -1,19 +1,25 @@
 Proyecto Final – Introducción a la Inteligencia Artificial
 
-Clasificación de estilo de lucha de peleadores de UFC
+Predicción del ganador en peleas de UFC
 
-Definición del problema:
-En las artes marciales mixtas, comprender el estilo de pelea de un atleta es esencial para analizar su estrategia, evaluar su desempeño y proyectar y/o predecir futuros resultados. Sin embargo, esta clasificación rara vez está disponible de forma estructurada en los datos disponibles.
-El proyecto en cuestión tiene como objetivo predecir el estilo de lucha de un peleador de UFC dentro de tres categorías: Striker, Grappler o Táctico. Esto se llevará a cabo utilizando datos estadísticos cuantitativos disponibles. Para esto, se entrenará un modelo de clasificación supervisado, permitiendo de esta manera asignar a cada peleador su estilo según el perfil determinado.
+- Definición del problema:
+En este proyecto se busca predecir el resultado de una pelea de UFC, específicamente si el peleador en la esquina roja ganará o no. Para eso, se usan estadísticas previas al combate, como altura, alcance y rendimiento ofensivo y defensivo de ambos peleadores.
 
-Plan de acción:
-Se utilizará un dataset real de estadísticas de peleadores de la UFC (https://www.kaggle.com/datasets/asaniczka/ufc-fighters-statistics), el cual incluye variables como golpes significativos por minuto, derribos, sumisiones, precisión y defensa.
-Los pasos a ejecutar son los siguientes:
-1.	Limpieza de datos y creación de la variable objetivo, la cual llamaremos “estilo_lucha”.
-2.	EDA  y Feature Engineering.
-3.	División de datos en entrenamiento y prueba.
-4.	Entrenamiento de un modelo de clasificación.
-5.	Evaluación del modelo con las métricas correspondientes y visualización de resultados.
+El objetivo es entrenar un modelo supervisado que aprenda a predecir el ganador usando datos reales. Se trata de un problema de clasificación binaria, donde el modelo debe anticipar si el peleador rojo gana (1) o no (0).
 
-Justicación del modelo:
-Se eligió el modelo de Árbol de Decisión ya que es altamente interpretable, fácil de entrenar y adecuado para clasificación multiclase con datos tabulares. Este modelo nos permitirá visualizar cómo las distintas estadísticas determinan el estilo de pelea, siendo coherente con el objetivo del proyecto.
+- Plan de acción:
+Se utilizará un dataset real de resultados de peleas de la UFC desde mediados del 2010 al 2024 (https://www.kaggle.com/datasets/mdabbert/ultimate-ufc-dataset). Los pasos a ejecutar son los siguientes:
+1.	Cargar y limpiar el dataset.
+2.	Crear la variable objetivo 'red_win' a partir de la columna 'winner'.
+3.	Explorar los datos (EDA) y generar visualizaciones.
+4.	Construir nuevas variables si es necesario.
+5.	Entrenar un modelo de clasificación binaria (un árbol de decisión).
+6. Evaluar el modelo y analizar los resultados.
+
+- Justicación del modelo:
+Se utilizará el modelo de Árbol de Decisión (DecisionTreeClassifier), por ser interpretativo, fácil de entrenar y coherente con el enfoque del curso. Este modelo permite visualizar qué características de los peleadores tienen mayor peso al momento de predecir el resultado de una pelea.
+
+En etapas posteriores también podrían compararse otros modelos (como Regresión Logística o KNN) para observar mejoras en el rendimiento.
+
+- Resultado esperado:
+Lo que se busca es construir un modelo que pueda predecir con buena precisión si el peleador rojo ganará, basándose solo en datos previos al combate. Esto podría ser útil para análisis deportivos, predicciones y visualizaciones dentro del mundo de las MMA.
