@@ -1,0 +1,10 @@
+name: predicciones_ufc
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+    - pandas==1.5.3
+    - numpy==1.24.0
+    - matplotlib==3.6.3
+    - seaborn==0.11.2
+    - scikit-learn==1.1.3
